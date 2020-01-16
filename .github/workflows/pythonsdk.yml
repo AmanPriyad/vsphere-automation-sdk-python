@@ -8,14 +8,14 @@ jobs:
     runs-on: self-hosted
     container: vmcswaggers-docker-local.artifactory.eng.vmware.com/vsphere-python-testing:1.2
     steps:
-      - env: 
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        env: 
            NIMBUS_TESTBED: vapi-testbeds.eng.vmware.com
            VC_PASSWORD: Admin!23
            VC_USER_NAME: administrator
            VC_VERSION: 67u3
            VC_VERSION_MAIN: main
-      - name: Install dependencies
-      - uses: actions/checkout@v2
       - run: |
           echo "Running smoke test"
           bash test/smoke-test.sh -u $VC_USER_NAME -p $VC_PASSWORD
