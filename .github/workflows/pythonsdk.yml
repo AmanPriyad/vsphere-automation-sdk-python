@@ -15,6 +15,7 @@ jobs:
            VC_VERSION: 67u3
            VC_VERSION_MAIN: main
       - name: Install dependencies
+      - uses: actions/checkout@v2
       - run: |
           echo "Running smoke test"
           bash test/smoke-test.sh -u $VC_USER_NAME -p $VC_PASSWORD
