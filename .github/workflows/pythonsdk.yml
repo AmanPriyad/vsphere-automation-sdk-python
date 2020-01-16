@@ -1,10 +1,7 @@
 name: vsphere-automation-sdk-python
-
 on: [push]
-
 jobs:
   build:
-
     runs-on: self-hosted
     container: vmcswaggers-docker-local.artifactory.eng.vmware.com/vsphere-python-testing:1.2
     steps:
@@ -16,7 +13,6 @@ jobs:
            VC_USER_NAME: administrator
            VC_VERSION: 67u3
            VC_VERSION_MAIN: main
-      - run: |
+        run: |
           echo "Running smoke test"
           bash test/smoke-test.sh -u $VC_USER_NAME -p $VC_PASSWORD
-        name: Run smoke test
