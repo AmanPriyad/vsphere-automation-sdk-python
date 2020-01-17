@@ -6,7 +6,7 @@ jobs:
     container: vmcswaggers-docker-local.artifactory.eng.vmware.com/vsphere-python-testing:1.2
     steps:
       - uses: actions/checkout@v2
-      - name: Install dependencies
+      - name: This is a POC
         env: 
            NIMBUS_TESTBED: ${{ secrets.nimbus_testbed }}
            VC_PASSWORD: ${{ secrets.vc_password }}
