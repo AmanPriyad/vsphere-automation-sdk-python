@@ -8,11 +8,11 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install dependencies
         env: 
-           NIMBUS_TESTBED: vapi-testbeds.eng.vmware.com
-           VC_PASSWORD: Admin!23
-           VC_USER_NAME: administrator@vsphere.local
-           VC_VERSION: 67u3
-           VC_VERSION_MAIN: main
+           NIMBUS_TESTBED: ${{ secrets.NIMBUS_TESTBED }}
+           VC_PASSWORD: ${{ secrets.VM_PASSWORD }}
+           VC_USER_NAME: ${{ secrets.VC_USER_NAME }}
+           VC_VERSION: ${{ secrets.VC_VERSION }}
+           VC_VERSION_MAIN: ${{ secrets.VC_VERSION_MAIN }}
         run: |
           echo "Running smoke test"
           bash tests/smoke-test.sh -u $VC_USER_NAME -p $VC_PASSWORD
