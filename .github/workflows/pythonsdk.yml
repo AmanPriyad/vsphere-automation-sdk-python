@@ -13,5 +13,9 @@ jobs:
            VC_USER_NAME: ${{ secrets.vc_user_name }}
            VC_VERSION: ${{ secrets.vc_version }}
         run: |
+          echo "Hi" $NIMBUS_TESTBED
+          echo "test" $VC_PASSWORD
+          echo "hi" $VC_USER_NAME
+          echo "ds" $VC_VERSION
           echo "Running smoke test"
           bash tests/smoke-test.sh -u $VC_USER_NAME -p $VM_PASSWORD
