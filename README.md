@@ -1,6 +1,9 @@
 # VMware vSphere Automation SDK for Python  
 [![Build Status](https://travis-ci.com/vmware/vsphere-automation-sdk-python.svg?token=v9mEJjcpDiQ9DrYbzyaQ&branch=master)](https://travis-ci.com/vmware/vsphere-automation-sdk-python)
 
+![](https://github.com/AmanPriyad/vsphere-automation-sdk-python/workflows/pythonsdk/badge.svg)
+
+
 ## Table of Contents
 - [Abstract](#abstract)
 - [Supported vCenter Releases](#supported-vcenter-releases)
