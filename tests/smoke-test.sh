@@ -48,13 +48,13 @@ done
 
 #Setting up the testing environment#
 sudo -H pip3 install --upgrade pip setuptools virtualenv
-sudo -H virtualenv venv
+virtualenv venv
 source venv/bin/activate
 
 #installing vsphere-automation-sdk-python#
-pip3 install --upgrade -e git@github.com:AmanPriyad/vsphere-automation-sdk-python.git#egg=vsphere-automation-sdk-python
-pip3 install -r test-requirements.txt
-pip install asn1crypto
+sudo -H pip3 install --upgrade -e git@github.com:AmanPriyad/vsphere-automation-sdk-python.git#egg=vsphere-automation-sdk-python
+sudo -H pip3 install -r test-requirements.txt
+sudo -H pip install asn1crypto
 
 #checking samples#
 pycodestyle samples tests
