@@ -64,8 +64,8 @@ export SDKDIR=`pwd`
 export PYTHONPATH="$PYTHONPATH":$SDKDIR
 
 #Getting VC_IP
-VC_VERSION="\"${{ secrets.VC_VERSION }}\""
-VC_ADDR=$(curl http://${{ secrets.NIMBUS_TESTBED }}/peek | jq '.'$VC_VERSION'[0]."vc"[0]."ip"')
+VC_VERSION="\"$VC_VERSION\""
+VC_ADDR=$(curl http://$NIMBUS_TESTBED/peek | jq '.'$VC_VERSION'[0]."vc"[0]."ip"')
 SERVER=${VC_ADDR//\"/}
 
 printf "Run some basic samples...\n"
