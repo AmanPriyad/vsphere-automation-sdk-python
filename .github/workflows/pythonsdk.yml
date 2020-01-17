@@ -5,7 +5,7 @@ jobs:
     runs-on: self-hosted
     container: vmcswaggers-docker-local.artifactory.eng.vmware.com/vsphere-python-testing:1.2
     steps:
-      - uses: actions/checkout@v2
+      #- uses: actions/checkout@v2
       - name: Install dependencies
         env: 
            NIMBUS_TESTBED: vapi-testbeds.eng.vmware.com
