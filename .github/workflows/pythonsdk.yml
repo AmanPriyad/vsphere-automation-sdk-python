@@ -10,7 +10,7 @@ jobs:
         env: 
            NIMBUS_TESTBED: vapi-testbeds.eng.vmware.com
            VC_PASSWORD: Admin!23
-           VC_USER_NAME: administrator
+           VC_USER_NAME: administrator@vsphere.local
            VC_VERSION: 67u3
            VC_VERSION_MAIN: main
         run: |
