@@ -47,12 +47,12 @@ esac
 done
 
 #Setting up the testing environment#
-pip3 install --upgrade pip setuptools virtualenv
-virtualenv venv
+sudo -H pip3 install --upgrade pip setuptools virtualenv
+sudo -H virtualenv venv
 source venv/bin/activate
 
 #installing vsphere-automation-sdk-python#
-pip3 install --upgrade -e git+git@gitlab.eng.vmware.com:vapi-sdk/vsphere-automation-sdk-python.git#egg=vsphere-automation-sdk-python
+pip3 install --upgrade -e git@github.com:AmanPriyad/vsphere-automation-sdk-python.git#egg=vsphere-automation-sdk-python
 pip3 install -r test-requirements.txt
 pip install asn1crypto
 
