@@ -52,7 +52,8 @@ virtualenv venv
 source venv/bin/activate
 
 #installing vsphere-automation-sdk-python#
-pip3 install --upgrade -e git+git@github.com:AmanPriyad/vsphere-automation-sdk-python.git#egg=vsphere-automation-sdk-python
+#pip3 install --upgrade -e git+git@github.com:AmanPriyad/vsphere-automation-sdk-python.git#egg=vsphere-automation-sdk-python
+pip3 install --upgrade git+https://github.com/vmware/vsphere-automation-sdk-python.git
 pip3 install -r test-requirements.txt
 pip install asn1crypto
 
