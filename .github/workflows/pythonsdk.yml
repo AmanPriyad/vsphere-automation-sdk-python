@@ -13,5 +13,6 @@ jobs:
            VC_USER_NAME: ${{ secrets.vc_user_name }}
            VC_VERSION: ${{ secrets.vc_version }}
         run: |
+          #this is a comment
           echo "Running smoke test"
           bash tests/smoke-test.sh -u $VC_USER_NAME -p $VC_PASSWORD
